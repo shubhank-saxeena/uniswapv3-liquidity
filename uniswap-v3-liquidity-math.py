@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+
+def _bootstrap():
+    import subprocess
+    import sys
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-r", "requirements.txt"])
+
+_bootstrap()
+
 """
 
 See the technical note "Liquidity Math in Uniswap v3" and the Uniswap v3 whitepaper
